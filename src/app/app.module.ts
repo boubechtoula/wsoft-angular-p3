@@ -6,11 +6,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { TetPipe } from './tet.pipe';
-import { CatPipe } from './pipes/cat.pipe';
-
+ 
+import { AppRoutingModule, routingCompnents } from './app-routing/app-routing.module';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { DepartementListComponent } from './departement-list/departement-list.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, TetPipe, CatPipe ],
+  imports:      [ BrowserModule, RouterModule,FormsModule, AppRoutingModule ],
+  declarations: [ AppComponent, HelloComponent,routingCompnents],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
